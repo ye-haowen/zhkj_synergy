@@ -1,0 +1,121 @@
+@blue:#1A95FF;
+@red:#F5222D;
+@orange:#E6A23C;
+@green:#01B48C;
+@font100:rgba(0,0,0,1);
+@font85:rgba(0,0,0,0.85);
+@font65:rgba(0,0,0,0.65);
+@font45:rgba(0,0,0,0.45);
+@font25:rgba(0,0,0,0.25);
+@fontBig:16px;
+@fontNormal:14px;
+@fontSmall:12px;
+@borderColor:#E9E9E9;
+.iconFont{
+  font-family: 'iconfont';
+}
+.indexMain{
+  padding: 24px 24px 60px 24px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // 模块样式
+  .modules{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #FFF;
+    margin-bottom: 24px;
+    .titleCtn{
+      height: 55px;
+      min-height: 55px;
+      padding: 0 24px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid @borderColor;
+      .title{
+        font-size: @fontBig;
+        color: @font100;
+        font-weight: bold;
+      }
+    }
+    .contentCtn{
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+  }
+  // 按钮样式
+  .btn{
+    display: inline-block;
+    cursor: pointer;
+    color: @font45;
+    &.solid{
+      padding: 0 14px;
+      height: 32px;
+      line-height: 32px;
+      background-color: @font45;
+      color: #FFF!important;
+      border-radius: 4px;
+      &.blue{
+        background-color: @blue;
+      }
+      &.red{
+        background-color: @red;
+      }
+      &.orange{
+        background-color: @orange;
+      }
+      &.green{
+        background-color: @green;
+      }
+    }
+    &.outline{
+      padding: 0 14px;
+      height: 32px;
+      line-height: 32px;
+      background-color: #FFF!important;
+      border: 1px solid @font45;
+      color: @font45;
+      border-radius: 4px;
+      box-sizing: border-box;
+      &.blue{
+        border-color: @blue;
+        color: @blue;
+      }
+      &.red{
+        border-color: @red;
+        color: @red;
+      }
+      &.orange{
+        border-color: @orange;
+        color: @orange;
+      }
+      &.green{
+        border-color: @green;
+        color: @green;
+      }
+    }
+    &.notAllow{
+      cursor: not-allowed;
+    }
+  }
+  // 文本加颜色  
+  .blue{
+    color: @blue;
+  }
+  .red{
+    color: @red;
+  }
+  .orange{
+    color: @orange;
+  }
+  .green{
+    color: @green;
+  }
+  .gray{
+    color: @font45;
+  }
+}

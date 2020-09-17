@@ -1,32 +1,63 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-<style>
+<style lang='less'>
+html,
+body,
 #app {
+  margin: 0;
+  padding: 0;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  min-width: 1440px;
+  height: 100%;
+  overflow: auto;
 }
-
-#nav {
-  padding: 30px;
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0);
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: transparent;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* 统一placeholder */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+/* IOS输入框内阴影去除 */
+input,
+textarea {
+  -webkit-appearance: none;
+}
+.el-input.is-disabled .el-input__inner {
+  color: #000 !important;
+}
+.el-autocomplete-suggestion {
+  width: auto !important;
 }
 </style>
